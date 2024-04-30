@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia &amp; Ruben</title>
+
+    <link href="" type="stylesheet">
+    <link href="{{url}}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url}}css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{url}}css/custom.css" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="{{url}}img/favicon.svg">
+    <link rel="icon" type="image/png" href="{{url}}img/favicon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand p-0" href="#top">
+                <img src="{{url}}img/logo.svg" alt="Olivia &amp; Ruben" height="40">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#OurStory">{{ "NAV_OUR_STORY" | translate }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Timeline">{{ "NAV_TIMELINE" | translate }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Accommodation">{{ "NAV_ACCOMMODATION" | translate }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Transport">{{ "NAV_TRANSPORT" | translate }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ToDo">{{ "NAV_TODO" | translate }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">{{ "NAV_FAQ" | translate }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#RSVP">{{ "NAV_RSVP" | translate }}</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navbar-text">
+                <div class="row justify-content-center">
+                    <div class="col-3 ps-0">&#x1F1EC;&#x1F1E7;</div>
+                    <div class="col-3 pe-0 form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                            autocomplete="off" onclick="toggleLanguage()">
+                    </div>
+                    <div class="col-3 ps-0">&#x1F1F3;&#x1F1F1;</div>
+                </div>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="w-100 mt-5" id="top">
+        <img class="img-fluid w-100" src="{{url}}img/us_2.jpg">
+    </div>
+
+    <div class="row m-0 mt-5 p-0 text-center ">
+        <!-- Countdown to wedding ceremony -->
+        <div class="col-md-7 col-sm-12 align-self-center w-100 text-center d-flex justify-content-evenly" id="countdown">
+            <div class="col-3">
+                <h1 id="countdownDays">00</h1>
+                <h5>{{ "DAYS" | translate }}</h5>
+            </div>
+            <div class="col-3">
+                <h1 id="countdownHours">00</h1>
+                <h5>{{ "HOURS" | translate }}</h5>
+            </div>
+            <div class="col-3">
+                <h1 id="countdownMinutes">00</h1>
+                <h5>{{ "MINUTES" | translate }}</h5>
+            </div>
+            <div class="col-3">
+                <h1 id="countdownSeconds">00</h1>
+                <h5>{{ "SECONDS" | translate }}</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="text-center pt-5 category-divider" id="OurStory">
+            <!-- Vertical timeline -->
+            <span class="small">{{ "WITH_LOVE" | translate }}</span>
+            <h1>{{ "OUR_STORY" | translate }}</h1>
+        </div>
+
+        <div class="main-timeline-4 text-white">
+            <div class="timeline-holder">
+                <div class="timeline-4 left-4">
+                    <div class="card gradient-custom">
+                        <div class="card-body p-4">
+                            <h4>{{ "HOW_WE_MET" | translate }}</h4>
+                            <p>{{ "HOW_WE_MET_DESC" | translate }}</p>
+                            <small class="float-end">{{ "HOW_WE_MET_DATE" | translate }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-holder">
+
+                <div class="timeline-4 right-4">
+                    <div class="card gradient-custom">
+                        <div class="card-body p-4">
+                            <h4>{{ "STARTED_DATING" | translate }}</h4>
+                            <p>{{ "STARTED_DATING_DESC" | translate }}</p>
+                            <small class="float-end">{{ "STARTED_DATING_DATE" | translate }} <span
+                                    class="fa-stack fa-lg" style="color: #5c6836;"><i class="fa fa-check fa-stack-1x"
+                                        style="padding-left:17px;"></i><i class="fa fa-check fa-stack-1x"></i></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-holder">
+
+                <div class="timeline-4 left-4">
+                    <div class="card gradient-custom">
+                        <div class="card-body p-4">
+                            <h4>{{ "FINALLY_TOGETHER" | translate }}</h4>
+                            <p>{{ "FINALLY_TOGETHER_DESC" | translate }}</p>
+                            <small class="float-end">{{ "FINALLY_TOGETHER_DATE" | translate }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-holder">
+
+                <div class="timeline-4 right-4">
+                    <div class="card gradient-custom">
+                        <div class="card-body p-4">
+                            <h4>{{ "HE_PROPOSED" | translate }}</h4>
+                            <p>{{ "HE_PROPOSED_DESC" | translate }}</p>
+                            <small class="float-end">{{ "HE_PROPOSED_DATE" | translate }} <span class="fa-stack fa-lg"
+                                    style="color: #5c6836;"><i class="fa fa-check fa-stack-1x"
+                                        style="padding-left:17px;"></i><i class="fa fa-check fa-stack-1x"></i></span>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-holder">
+                <div class="timeline-4 left-4" data-mdb-animation-start="onScroll" data-mdb-toggle="animation"
+                    data-mdb-animation="slide-out-right">
+                    <div class="card gradient-custom">
+                        <div class="card-body p-4">
+                            <h4>{{ "OUR_WEDDING_DAY" | translate }}</h4>
+                            <p>{{ "OUR_WEDDING_DAY_DESC" | translate }}</p>
+                            <small class="float-end">{{ "OUR_WEDDING_DAY_DATE" | translate }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center pt-5 category-divider" id="Timeline">
+        <span class="small">{{ "WHEN_AND_WHAT" | translate }}</span>
+        <h1>{{ "TIMELINE" | translate }}</h1>
+    </div>
+    <div class="container-fluid horizontal-timeline overflow-scroll ">
+        <ul class="row flex-row flex-nowrap list-inline items">
+            {% for timeline_item in content['timeline_items'] %}
+            <li class="list-inline-item items-list col-3">
+                <div class="px-4">
+                    <h5 class="pt-2">{{ timeline_item['time'] }}</h5>
+                    <p class="text-muted">
+                        {{ timeline_item['description'] | translate_val }}
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <div class="text-center pt-5 category-divider" id="Accommodation">
+            <span class="small">{{ "WHERE_TO_STAY" | translate }}</span>
+            <h1>{{ "ACCOMMODATION" | translate }}</h1>
+        </div>
+
+        <div id="accommodationCarousel" class="carousel multiItemCarousel">
+            <div class="carousel-inner">
+                {% for accommodation in content['accommodations'] %}
+                <div class="carousel-item {% if loop.index == 1%}active{% endif %}">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img class="img-fluid w-100" style="height: 280px; object-fit: cover;"
+                                alt="{{ accommodation['name'] }}" src="{{ accommodation['img_url'] }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ accommodation['name'] }}</h5>
+                            <p class="card-text">
+                                {{ accommodation['description'] | translate_val }}
+                            </p>
+                            <span><i class="fa fa-money" aria-hidden="true"></i> {{ accommodation['costs']
+                                }}</span><br>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i> <a
+                                    href="tel:{{ accommodation['phone'] }}">{{ accommodation['phone']
+                                    }}</a></span><br>
+                            <span><i class="fa fa-globe" aria-hidden="true"></i>
+                                <a target="_blank" href="{{ accommodation['url'] }}">{{ accommodation['display_url']
+                                    }}</a>
+                            </span><br>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#accommodationCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{ "PREVIOUS" | translate }}</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#accommodationCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{ "NEXT" | translate }}</span>
+            </button>
+        </div>
+
+        <div class="text-center pt-5 category-divider" id="Transport">
+            <span class="small">{{ "HOW_TO_GET_THERE" | translate }}</span>
+            <h1>{{ "TRANSPORT" | translate }}</h1>
+        </div>
+
+        <div id="carouselExample" class="carousel slide mt-3">
+            <div class="carousel-inner w-75 mx-auto">
+                <div class="carousel-item active">
+                    <div class="card w-100">
+                        <img style="height: 280px; object-fit: cover;" src="{{url}}img/Foxtail-Barns.jpg"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ "FLIGHTS" | translate }}</h5>
+                            <p class="card-text">{{ "FLIGHTS_DESC" | translate }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card w-100">
+                        <img style="height: 280px; object-fit: cover;" src="{{url}}img/Foxtail-Barns-Orangery.jpg"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ "PUBLIC_TRANSPORT" | translate }}</h5>
+                            <p class="card-text">{{ "PUBLIC_TRANSPORT_DESC" | translate }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card w-100">
+                        <img style="height: 280px; object-fit: cover;" src="{{url}}img/Foxtail-Barns-Party.jpg"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ "HIRED_TRANSPORT" | translate }}</h5>
+                            <p class="card-text">{{ "HIRED_TRANSPORT_DESC" | translate }}</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{ "PREVIOUS" | translate }}</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{ "NEXT" | translate }}</span>
+            </button>
+        </div>
+
+        <div class="text-center pt-5 category-divider" id="ToDo">
+            <span class="small">{{ "WHAT_TO_DO" | translate }}</span>
+            <h1>{{ "THINGS_TO_DO" | translate }}</h1>
+        </div>
+
+        <div id="whatToDoCarousel" class="carousel multiItemCarousel">
+            <div class="carousel-inner">
+                {% for activity in content['activities'] %}
+                <div class="carousel-item {% if loop.index == 1%}active{% endif %}">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img class="img-fluid w-100" style="height: 280px; object-fit: cover;"
+                                alt="{{ activity['name'] }}" src="{{ activity['img_url'] }}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ activity['name'] }}</h5>
+                            <p class="card-text">
+                                {{ activity['description'] | translate_val }}
+                            </p>
+                            <span><i class="fa fa-money" aria-hidden="true"></i> {{ activity['costs'] }}</span><br>
+                            <span><i class="fa fa-map" aria-hidden="true"></i> {{ activity['address'] }}</span><br>
+                            <span><i class="fa fa-globe" aria-hidden="true"></i>
+                                <a target="_blank" href="{{ activity['url'] }}">{{ activity['display_url']
+                                    }}</a>
+                            </span><br>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#whatToDoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{ "PREVIOUS" | translate }}</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#whatToDoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{{ "NEXT" | translate }}</span>
+            </button>
+        </div>
+    </div>
+
+    <img class="img-fluid w-100" src="{{url}}img/Barns.png">
+
+    <div class="container">
+        <div class="text-center pt-5 category-divider" id="FAQ">
+            <span class="small">{{ "EVERYTHING_TO_KNOW" | translate }}</span>
+            <h1>{{ "FAQ_LONG" | translate }}</h1>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+            {% for rsvp_question in content['rsvp_questions'] %}
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse{{ loop.index }}" aria-expanded="false"
+                        aria-controls="collapse{{ loop.index }}">
+                        {{ rsvp_question['name'] | translate_val }}
+                    </button>
+                </h2>
+                <div id="collapse{{ loop.index }}" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        {{ rsvp_question['description'] | translate_val }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="row pt-5" id="RSVP">
+            <div class="col-md-7 col-sm-12 mb-3">
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <div class="card" style="margin-top: 30px;">
+                        <div class="card-body">
+                            <div class="text-center category-divider">
+                                <span class="small">{{ "PLEASE_LET_US_KNOW" | translate }}</span>
+                                <h1>{{ "R.S.V.P." | translate }}</h1>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input name="$firstName" type="text" class="form-control"
+                                            id="floatingInputFirstName" required>
+                                        <label for="floatingInputFirstName">{{ "FIRST_NAME" | translate }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input name="$lastName" type="text" class="form-control"
+                                            id="floatingInputLastName" required>
+                                        <label for="floatingInputLastName">{{ "LAST_NAME" | translate }}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input name="$email" type="email" class="form-control" id="floatingInputEmail"
+                                            required>
+                                        <label for="floatingInputEmail">{{ "EMAIL" | translate }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input name="$phoneNumber" type="tel" class="form-control"
+                                            id="floatingInputPhone" required>
+                                        <label for="floatingInputPhone">{{ "PHONE_NUMBER" | translate }}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 mt-3">
+                                    <div class="form-floating">
+                                        <select required name="$howManyInvited" class="form-select"
+                                            id="floatingSelectInvite">
+                                            {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
+                                            {{ "ONE" | translate_select("value=\"1\"") }}
+                                            {{ "TWO" | translate_select("value=\"2\"") }}
+                                            {{ "THREE" | translate_select("value=\"3\"") }}
+                                            {{ "FOUR" | translate_select("value=\"4\"") }}
+                                            {{ "FIVE" | translate_select("value=\"5\"") }}
+                                        </select>
+                                        <label for="floatingSelectInvite">{{ "HOW_MANY_INVITE" | translate
+                                            }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 mt-3">
+                                    <div class="form-floating">
+                                        <select required name="$howManyAttend" class="form-select"
+                                            id="floatingSelectAttend">
+                                            {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
+                                            {{ "NONE" | translate_select("value=\"0\"") }}
+                                            {{ "ONE" | translate_select("value=\"1\"") }}
+                                            {{ "TWO" | translate_select("value=\"2\"") }}
+                                            {{ "THREE" | translate_select("value=\"3\"") }}
+                                            {{ "FOUR" | translate_select("value=\"4\"") }}
+                                            {{ "FIVE" | translate_select("value=\"5\"") }}
+                                        </select>
+                                        <label for="floatingSelectAttend">{{ "HOW_MANY_ATTEND" | translate
+                                            }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 mt-3 hidden">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelectInviteHidden">
+                                            {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
+                                            {{ "ONE" | translate_select("value=\"1\"") }}
+                                            {{ "TWO" | translate_select("value=\"2\"") }}
+                                            {{ "THREE" | translate_select("value=\"3\"") }}
+                                            {{ "FOUR" | translate_select("value=\"4\"") }}
+                                            {{ "FIVE" | translate_select("value=\"5\"") }}
+                                        </select>
+                                        <label for="floatingSelectInvite">{{ "HOW_MANY_INVITE" | translate
+                                            }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 mt-3 hidden">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelectAttendHidden">
+                                            {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
+                                            {{ "NONE" | translate_select("value=\"0\"") }}
+                                            {{ "ONE" | translate_select("value=\"1\"") }}
+                                            {{ "TWO" | translate_select("value=\"2\"") }}
+                                            {{ "THREE" | translate_select("value=\"3\"") }}
+                                            {{ "FOUR" | translate_select("value=\"4\"") }}
+                                            {{ "FIVE" | translate_select("value=\"5\"") }}
+                                        </select>
+                                        <label for="floatingSelectAttend">{{ "HOW_MANY_ATTEND" | translate
+                                            }}</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-floating mt-3">
+                                <textarea name="$attendeeNames" class="form-control" id="floatingTextareaNames"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextareaNames">{{ "PROVIDE_NAMES" | translate }}</label>
+                            </div>
+
+                            <div class="form-floating mt-3">
+                                <textarea name="$attendeeDietary" class="form-control" id="floatingTextareaDietary"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextareaDietary">{{ "DIETARY_REQUIREMENTS" | translate
+                                    }}</label>
+                            </div>
+
+                            <button id="RSVPButton" class="btn btn-primary mt-3 w-100" type="submit">{{
+                                "SUBMIT_RSVP" |
+                                translate }}</button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="accessKey" value="6cbbd2e5-3be3-41fe-92d1-dd91e237fb83">
+                    <input type="hidden" name="replyTo" value="@">
+                    <input type="hidden" name="subject" value="New RSVP!"/>
+                    <input type="hidden" name="redirectTo" value="https://www.soontobesmits.co.uk/?sentRSVP"> 
+                    <input type="text" name="honeypot" style="display: none;">
+                </form>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <img class="img-fluid rounded" src="{{url}}img/us_1.jpg">
+            </div>
+        </div>
+    </div>
+
+    <a href="#RSVP">
+        <div class="position-fixed bottom-0 end-0 rounded-circle m-3 text-center shadow"
+            style="background-color: #CCD5AE; height: 80px; line-height: 80px; width: 80px; font-size: 16pt; z-index: 999;">
+            <p class="text-center">RSVP</p>
+        </div>
+    </a>
+
+    <div id="RSCPConfirmationAlert" class="fixed-top p-3" style="top:60px"></div>
+
+
+</body>
+<script src="{{url}}js/bootstrap.bundle.min.js"></script>
+<script>
+    var countDownDate = new Date("Sep 13, 2024 14:00:00").getTime();
+    var timeWait = 0;
+
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdownDays").innerHTML = String(days).padStart(2, '0');
+        document.getElementById("countdownHours").innerHTML = String(hours).padStart(2, '0');
+        document.getElementById("countdownMinutes").innerHTML = String(minutes).padStart(2, '0');
+        document.getElementById("countdownSeconds").innerHTML = String(seconds).padStart(2, '0');
+
+        timeWait = 1000;
+    }, timeWait);
+
+    function initializeCarousel(containerId) {
+        var carouselContainer = document.querySelector("#" + containerId);
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            var carousel = new bootstrap.Carousel(carouselContainer, {
+                interval: false
+            });
+
+            var carouselInner = carouselContainer.querySelector(".carousel-inner");
+            var cardWidth = carouselContainer.querySelector(".carousel-item").offsetWidth;
+            var scrollPosition = 0;
+
+            carouselContainer.querySelector(".carousel-control-next").addEventListener("click", function () {
+                if (scrollPosition < carouselInner.scrollWidth - cardWidth * 4) {
+                    scrollPosition += cardWidth;
+                    smoothScroll(carouselInner, scrollPosition, 600);
+                }
+            });
+
+            carouselContainer.querySelector(".carousel-control-prev").addEventListener("click", function () {
+                if (scrollPosition > 0) {
+                    scrollPosition -= cardWidth;
+                    smoothScroll(carouselInner, scrollPosition, 600);
+                }
+            });
+        } else {
+            carouselContainer.classList.add("slide");
+        }
+    }
+
+    function smoothScroll(element, to, duration) {
+        var start = element.scrollLeft,
+            change = to - start,
+            currentTime = 0,
+            increment = 20;
+
+        var animateScroll = function () {
+            currentTime += increment;
+            var val = Math.easeInOutQuad(currentTime, start, change, duration);
+            element.scrollTo({
+                left: val,
+                behavior: 'auto'
+            });
+            if (currentTime < duration) {
+                requestAnimationFrame(animateScroll);
+            }
+        };
+
+        animateScroll();
+    }
+
+    Math.easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    function toggleLanguage() {
+        document.querySelectorAll('[lang="nl"]').forEach(function (element) {
+            element.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('[lang="en"]').forEach(function (element) {
+            element.classList.toggle('hidden');
+        });
+
+        clearSelect();
+    };
+
+    function clearSelect() {
+        ["floatingSelectInvite", "floatingSelectAttend"].forEach(function (elementName) {
+            var dropdown = document.getElementById(elementName);
+            var dropdownHidden = document.getElementById(elementName + "Hidden")
+            dropdown.innerHTML = dropdownHidden.innerHTML;
+            var visibleOptions = Array.from(dropdown.options).filter(option => !option.classList.contains('hidden'));
+            dropdown.options.length = 0;
+            for (var i = 0; i < visibleOptions.length; i++) {
+                dropdown.options.add(visibleOptions[i], undefined)
+            }
+            dropdown.selectedIndex = 0;
+        });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const square = entry.target.querySelector('.timeline-4');
+
+            if (entry.isIntersecting) {
+                if (square.classList.contains('right-4')) {
+                    square.classList.add('square-animation-right');
+                } else {
+                    square.classList.add('square-animation-left');
+                }
+                return;
+            }
+        });
+    });
+
+    Array.from(document.getElementsByClassName('timeline-holder')).forEach(element => {
+        observer.observe(element);
+    });
+
+    initializeCarousel("accommodationCarousel");
+    initializeCarousel("whatToDoCarousel");
+
+    clearSelect();
+
+
+    const alertPlaceholder = document.getElementById('RSCPConfirmationAlert');
+    const showAlert = (message) => {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = [
+            `<div class="alert alert-success alert-dismissible text-center" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('');
+
+        alertPlaceholder.append(wrapper);
+    }
+
+    if (window.location.search.includes("sentRSVP")) {
+        showAlert('&#x1F1EC;&#x1F1E7;: Thank you for submitting your RSVP!<br>&#x1F1F3;&#x1F1F1;: Bedankt voor het invullen van de RSVP!');
+        window.history.pushState("", "", "/");
+    }
+
+</script>
+
+</html>
