@@ -843,11 +843,11 @@ CONTENT = {
             'name': {'en': "What time should I arrive?", 'nl': "Hoe laat word ik verwacht?"},
             'description': {
                 'en': """
-                    Help us get the party started as scheduled! We recommend that you arrive at 13:30, which is an 
-                    hour before the start of the ceremony, to make sure everyone is seated on time""",
+                    Help us get the party started as scheduled! We recommend that you arrive at 13:30, which is 30 minutes
+                    before the start of the ceremony, to make sure everyone is seated on time""",
                 'nl': """
                     Help ons het feest op tijd in gang te krijgen! We raden je aan om 13.30 uur aanwezig te zijn, 
-                    wat een uur voor aanvang van de ceremonie is, om er zeker van te zijn dat iedereen op tijd zit
+                    wat 30 minuten voor aanvang van de ceremonie is, om er zeker van te zijn dat iedereen op tijd zit
                 """,
             }
         },
