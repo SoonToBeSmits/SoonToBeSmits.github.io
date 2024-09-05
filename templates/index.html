@@ -16,52 +16,62 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand p-0" href="#top">
-                <img src="{{url}}img/logo.svg" alt="Olivia &amp; Ruben" height="40">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#OurStory">{{ "NAV_OUR_STORY" | translate }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Timeline">{{ "NAV_TIMELINE" | translate }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Accommodation">{{ "NAV_ACCOMMODATION" | translate }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Transport">{{ "NAV_TRANSPORT" | translate }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ToDo">{{ "NAV_TODO" | translate }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#FAQ">{{ "NAV_FAQ" | translate }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#RSVP">{{ "NAV_RSVP" | translate }}</a>
-                    </li>
-                </ul>
-            </div>
-            <span class="navbar-text">
-                <div class="row justify-content-center">
-                    <div class="col-3 ps-0">&#x1F1EC;&#x1F1E7;</div>
-                    <div class="col-3 pe-0 form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                            autocomplete="off" onclick="toggleLanguage()">
-                    </div>
-                    <div class="col-3 ps-0">&#x1F1F3;&#x1F1F1;</div>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand p-0" href="#top">
+                    <img src="{{url}}img/logo.svg" alt="Olivia &amp; Ruben" height="40">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#OurStory">{{ "NAV_OUR_STORY" | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Timeline">{{ "NAV_TIMELINE" | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Accommodation">{{ "NAV_ACCOMMODATION" | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Transport">{{ "NAV_TRANSPORT" | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ToDo">{{ "NAV_TODO" | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#FAQ">{{ "NAV_FAQ" | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#RSVP">{{ "NAV_RSVP" | translate }}</a>
+                        </li>
+                    </ul>
                 </div>
-            </span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+                <span class="navbar-text">
+                    <div class="row justify-content-center">
+                        <div class="col-3 ps-0">&#x1F1EC;&#x1F1E7;</div>
+                        <div class="col-3 pe-0 form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                autocomplete="off" onclick="toggleLanguage()">
+                        </div>
+                        <div class="col-3 ps-0">&#x1F1F3;&#x1F1F1;</div>
+                    </div>
+                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+        </nav>
+
+        <a href="https://one.network/?tmi=GB33721326" target="_blank">
+            <div class="alert alert-danger alert-dismissible text-center rounded-0" role="alert">
+                <div>{{ "ROAD_WORKS" | translate }}</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </a>
+    </div>
 
     <div class="w-100 mt-5" id="top">
         <img class="img-fluid w-100" src="{{url}}img/us_2.jpg">
@@ -69,7 +79,8 @@
 
     <div class="row m-0 mt-5 p-0 text-center ">
         <!-- Countdown to wedding ceremony -->
-        <div class="col-md-7 col-sm-12 align-self-center w-100 text-center d-flex justify-content-evenly" id="countdown">
+        <div class="col-md-7 col-sm-12 align-self-center w-100 text-center d-flex justify-content-evenly"
+            id="countdown">
             <div class="col-3">
                 <h1 id="countdownDays">00</h1>
                 <h5>{{ "DAYS" | translate }}</h5>
@@ -358,12 +369,17 @@
                                 <span class="small">{{ "PLEASE_LET_US_KNOW" | translate }}</span>
                                 <h1>{{ "R.S.V.P." | translate }}</h1>
                             </div>
+                            {% if not RSVP %}
+                            <div class="alert alert-success text-center rounded-0" role="alert">
+                                <div>{{ "RSVP_CLOSED" | translate }}</div>
+                            </div>
+                            {% endif %}
 
                             <div class="row mt-3">
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$firstName" type="text" class="form-control"
-                                            id="floatingInputFirstName" required>
+                                            id="floatingInputFirstName" required{% if not RSVP %} disabled{% endif %}>
                                         <label for="floatingInputFirstName">{{ "FIRST_NAME" | translate }}</label>
                                     </div>
                                 </div>
@@ -371,7 +387,7 @@
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$lastName" type="text" class="form-control"
-                                            id="floatingInputLastName" required>
+                                            id="floatingInputLastName" required{% if not RSVP %} disabled{% endif %}>
                                         <label for="floatingInputLastName">{{ "LAST_NAME" | translate }}</label>
                                     </div>
                                 </div>
@@ -381,7 +397,7 @@
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$email" type="email" class="form-control" id="floatingInputEmail"
-                                            required>
+                                            required{% if not RSVP %} disabled{% endif %}>
                                         <label for="floatingInputEmail">{{ "EMAIL" | translate }}</label>
                                     </div>
                                 </div>
@@ -389,7 +405,7 @@
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$phoneNumber" type="tel" class="form-control"
-                                            id="floatingInputPhone" required>
+                                            id="floatingInputPhone" required{% if not RSVP %} disabled{% endif %}>
                                         <label for="floatingInputPhone">{{ "PHONE_NUMBER" | translate }}</label>
                                     </div>
                                 </div>
@@ -399,7 +415,7 @@
                                 <div class="col-md-6 col-sm-12 mt-3">
                                     <div class="form-floating">
                                         <select required name="$howManyInvited" class="form-select"
-                                            id="floatingSelectInvite">
+                                            id="floatingSelectInvite"{% if not RSVP %} disabled{% endif %}>
                                             {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
                                             {{ "ONE" | translate_select("value=\"1\"") }}
                                             {{ "TWO" | translate_select("value=\"2\"") }}
@@ -415,7 +431,7 @@
                                 <div class="col-md-6 col-sm-12 mt-3">
                                     <div class="form-floating">
                                         <select required name="$howManyAttend" class="form-select"
-                                            id="floatingSelectAttend">
+                                            id="floatingSelectAttend"{% if not RSVP %} disabled{% endif %}>
                                             {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
                                             {{ "NONE" | translate_select("value=\"0\"") }}
                                             {{ "ONE" | translate_select("value=\"1\"") }}
@@ -431,7 +447,7 @@
 
                                 <div class="col-md-6 col-sm-12 mt-3 hidden">
                                     <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectInviteHidden">
+                                        <select class="form-select" id="floatingSelectInviteHidden"{% if not RSVP %} disabled{% endif %}>
                                             {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
                                             {{ "ONE" | translate_select("value=\"1\"") }}
                                             {{ "TWO" | translate_select("value=\"2\"") }}
@@ -446,7 +462,7 @@
 
                                 <div class="col-md-6 col-sm-12 mt-3 hidden">
                                     <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectAttendHidden">
+                                        <select class="form-select" id="floatingSelectAttendHidden"{% if not RSVP %} disabled{% endif %}>
                                             {{ "PLEASE_SELECT" | translate_select("disabled selected value=\"\"") }}
                                             {{ "NONE" | translate_select("value=\"0\"") }}
                                             {{ "ONE" | translate_select("value=\"1\"") }}
@@ -463,27 +479,29 @@
 
                             <div class="form-floating mt-3">
                                 <textarea name="$attendeeNames" class="form-control" id="floatingTextareaNames"
-                                    style="height: 100px"></textarea>
+                                    style="height: 100px"{% if not RSVP %} disabled{% endif %}></textarea>
                                 <label for="floatingTextareaNames">{{ "PROVIDE_NAMES" | translate }}</label>
                             </div>
 
                             <div class="form-floating mt-3">
                                 <textarea name="$attendeeDietary" class="form-control" id="floatingTextareaDietary"
-                                    style="height: 100px"></textarea>
+                                    style="height: 100px"{% if not RSVP %} disabled{% endif %}></textarea>
                                 <label for="floatingTextareaDietary">{{ "DIETARY_REQUIREMENTS" | translate
                                     }}</label>
                             </div>
 
-                            <button id="RSVPButton" class="btn btn-primary mt-3 w-100" type="submit">{{
+                            <button id="RSVPButton" class="btn btn-primary mt-3 w-100" type="submit"{% if not RSVP %} disabled{% endif %}>{{
                                 "SUBMIT_RSVP" |
                                 translate }}</button>
                         </div>
                     </div>
+                    {% if RSVP %}
                     <input type="hidden" name="accessKey" value="6cbbd2e5-3be3-41fe-92d1-dd91e237fb83">
                     <input type="hidden" name="replyTo" value="@">
-                    <input type="hidden" name="subject" value="New RSVP!"/>
-                    <input type="hidden" name="redirectTo" value="https://www.soontobesmits.co.uk/?sentRSVP"> 
+                    <input type="hidden" name="subject" value="New RSVP!" />
+                    <input type="hidden" name="redirectTo" value="https://www.soontobesmits.co.uk/?sentRSVP">
                     <input type="text" name="honeypot" style="display: none;">
+                    {% endif %}
                 </form>
             </div>
             <div class="col-md-5 col-sm-12">
@@ -492,14 +510,16 @@
         </div>
     </div>
 
+    {% if RSVP %}
     <a href="#RSVP">
         <div class="position-fixed bottom-0 end-0 rounded-circle m-3 text-center shadow"
             style="background-color: #CCD5AE; height: 80px; line-height: 80px; width: 80px; font-size: 16pt; z-index: 999;">
             <p class="text-center">RSVP</p>
         </div>
     </a>
+    {% endif %}
 
-    <div id="RSCPConfirmationAlert" class="fixed-top p-3" style="top:60px"></div>
+    {% if RSVP %}<div id="RSCPConfirmationAlert" class="fixed-top p-3" style="top:60px"></div>{% endif %}
 
 
 </body>

@@ -16,52 +16,62 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand p-0" href="#top">
-                <img src="/img/logo.svg" alt="Olivia &amp; Ruben" height="40">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#OurStory"><span lang="en">Our Story</span><span class="hidden" lang="nl">Ons Verhaal</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Timeline"><span lang="en">Timeline</span><span class="hidden" lang="nl">Tijdlijn</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Accommodation"><span lang="en">Accommodation</span><span class="hidden" lang="nl">Accomodatie</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Transport"><span lang="en">Transport</span><span class="hidden" lang="nl">Vervoer</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ToDo"><span lang="en">To-Do</span><span class="hidden" lang="nl">Te-Doen</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#FAQ"><span lang="en">FAQ</span><span class="hidden" lang="nl">FAQ</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#RSVP"><span lang="en">RSVP</span><span class="hidden" lang="nl">RSVP</span></a>
-                    </li>
-                </ul>
-            </div>
-            <span class="navbar-text">
-                <div class="row justify-content-center">
-                    <div class="col-3 ps-0">&#x1F1EC;&#x1F1E7;</div>
-                    <div class="col-3 pe-0 form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                            autocomplete="off" onclick="toggleLanguage()">
-                    </div>
-                    <div class="col-3 ps-0">&#x1F1F3;&#x1F1F1;</div>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand p-0" href="#top">
+                    <img src="/img/logo.svg" alt="Olivia &amp; Ruben" height="40">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#OurStory"><span lang="en">Our Story</span><span class="hidden" lang="nl">Ons Verhaal</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Timeline"><span lang="en">Timeline</span><span class="hidden" lang="nl">Tijdlijn</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Accommodation"><span lang="en">Accommodation</span><span class="hidden" lang="nl">Accomodatie</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Transport"><span lang="en">Transport</span><span class="hidden" lang="nl">Vervoer</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ToDo"><span lang="en">To-Do</span><span class="hidden" lang="nl">Te-Doen</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#FAQ"><span lang="en">FAQ</span><span class="hidden" lang="nl">FAQ</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#RSVP"><span lang="en">RSVP</span><span class="hidden" lang="nl">RSVP</span></a>
+                        </li>
+                    </ul>
                 </div>
-            </span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+                <span class="navbar-text">
+                    <div class="row justify-content-center">
+                        <div class="col-3 ps-0">&#x1F1EC;&#x1F1E7;</div>
+                        <div class="col-3 pe-0 form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                                autocomplete="off" onclick="toggleLanguage()">
+                        </div>
+                        <div class="col-3 ps-0">&#x1F1F3;&#x1F1F1;</div>
+                    </div>
+                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+        </nav>
+
+        <a href="https://one.network/?tmi=GB33721326" target="_blank">
+            <div class="alert alert-danger alert-dismissible text-center rounded-0" role="alert">
+                <div><span lang="en">Please note that road closures may impact your travel plans -- Click here for more information!</span><span class="hidden" lang="nl">Houd er rekening mee dat wegafsluitingen invloed kunnen hebben op je reisplannen -- Klik hier voor meer informatie!</span></div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </a>
+    </div>
 
     <div class="w-100 mt-5" id="top">
         <img class="img-fluid w-100" src="/img/us_2.jpg">
@@ -69,7 +79,8 @@
 
     <div class="row m-0 mt-5 p-0 text-center ">
         <!-- Countdown to wedding ceremony -->
-        <div class="col-md-7 col-sm-12 align-self-center w-100 text-center d-flex justify-content-evenly" id="countdown">
+        <div class="col-md-7 col-sm-12 align-self-center w-100 text-center d-flex justify-content-evenly"
+            id="countdown">
             <div class="col-3">
                 <h1 id="countdownDays">00</h1>
                 <h5><span lang="en">Days</span><span class="hidden" lang="nl">Dagen</span></h5>
@@ -1477,12 +1488,17 @@
                                 <span class="small"><span lang="en">PLEASE LET US KNOW</span><span class="hidden" lang="nl">LAAT HET ONS WETEN</span></span>
                                 <h1><span lang="en">R.S.V.P.</span><span class="hidden" lang="nl">R.S.V.P.</span></h1>
                             </div>
+                            
+                            <div class="alert alert-success text-center rounded-0" role="alert">
+                                <div><span lang="en">We're all set for the party; thank you for considering attending!</span><span class="hidden" lang="nl">We zijn klaar voor het feest. Bedankt voor het overwegen om te komen!</span></div>
+                            </div>
+                            
 
                             <div class="row mt-3">
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$firstName" type="text" class="form-control"
-                                            id="floatingInputFirstName" required>
+                                            id="floatingInputFirstName" required disabled>
                                         <label for="floatingInputFirstName"><span lang="en">First Name</span><span class="hidden" lang="nl">Voornaam</span></label>
                                     </div>
                                 </div>
@@ -1490,7 +1506,7 @@
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$lastName" type="text" class="form-control"
-                                            id="floatingInputLastName" required>
+                                            id="floatingInputLastName" required disabled>
                                         <label for="floatingInputLastName"><span lang="en">Last Name</span><span class="hidden" lang="nl">Achternaam</span></label>
                                     </div>
                                 </div>
@@ -1500,7 +1516,7 @@
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$email" type="email" class="form-control" id="floatingInputEmail"
-                                            required>
+                                            required disabled>
                                         <label for="floatingInputEmail"><span lang="en">Email</span><span class="hidden" lang="nl">Email</span></label>
                                     </div>
                                 </div>
@@ -1508,7 +1524,7 @@
                                 <div class="col">
                                     <div class="form-floating">
                                         <input name="$phoneNumber" type="tel" class="form-control"
-                                            id="floatingInputPhone" required>
+                                            id="floatingInputPhone" required disabled>
                                         <label for="floatingInputPhone"><span lang="en">Phone Number</span><span class="hidden" lang="nl">Telefoonnummer</span></label>
                                     </div>
                                 </div>
@@ -1518,7 +1534,7 @@
                                 <div class="col-md-6 col-sm-12 mt-3">
                                     <div class="form-floating">
                                         <select required name="$howManyInvited" class="form-select"
-                                            id="floatingSelectInvite">
+                                            id="floatingSelectInvite" disabled>
                                             
     <option disabled selected value="" lang="en">Please select</option>
     <option disabled selected value="" lang="nl" class="hidden">Maak een keuze</option>
@@ -1551,7 +1567,7 @@
                                 <div class="col-md-6 col-sm-12 mt-3">
                                     <div class="form-floating">
                                         <select required name="$howManyAttend" class="form-select"
-                                            id="floatingSelectAttend">
+                                            id="floatingSelectAttend" disabled>
                                             
     <option disabled selected value="" lang="en">Please select</option>
     <option disabled selected value="" lang="nl" class="hidden">Maak een keuze</option>
@@ -1587,7 +1603,7 @@
 
                                 <div class="col-md-6 col-sm-12 mt-3 hidden">
                                     <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectInviteHidden">
+                                        <select class="form-select" id="floatingSelectInviteHidden" disabled>
                                             
     <option disabled selected value="" lang="en">Please select</option>
     <option disabled selected value="" lang="nl" class="hidden">Maak een keuze</option>
@@ -1619,7 +1635,7 @@
 
                                 <div class="col-md-6 col-sm-12 mt-3 hidden">
                                     <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectAttendHidden">
+                                        <select class="form-select" id="floatingSelectAttendHidden" disabled>
                                             
     <option disabled selected value="" lang="en">Please select</option>
     <option disabled selected value="" lang="nl" class="hidden">Maak een keuze</option>
@@ -1656,24 +1672,20 @@
 
                             <div class="form-floating mt-3">
                                 <textarea name="$attendeeNames" class="form-control" id="floatingTextareaNames"
-                                    style="height: 100px"></textarea>
+                                    style="height: 100px" disabled></textarea>
                                 <label for="floatingTextareaNames"><span lang="en">Please provide their names below</span><span class="hidden" lang="nl">Vul hier a.u.b. hun namen in</span></label>
                             </div>
 
                             <div class="form-floating mt-3">
                                 <textarea name="$attendeeDietary" class="form-control" id="floatingTextareaDietary"
-                                    style="height: 100px"></textarea>
+                                    style="height: 100px" disabled></textarea>
                                 <label for="floatingTextareaDietary"><span lang="en">Does anyone have any dietary requirements?</span><span class="hidden" lang="nl">Heeft iemand dieetwensen of -beperkingen?</span></label>
                             </div>
 
-                            <button id="RSVPButton" class="btn btn-primary mt-3 w-100" type="submit"><span lang="en">Submit RSVP</span><span class="hidden" lang="nl">Verstuur RSVP</span></button>
+                            <button id="RSVPButton" class="btn btn-primary mt-3 w-100" type="submit" disabled><span lang="en">Submit RSVP</span><span class="hidden" lang="nl">Verstuur RSVP</span></button>
                         </div>
                     </div>
-                    <input type="hidden" name="accessKey" value="6cbbd2e5-3be3-41fe-92d1-dd91e237fb83">
-                    <input type="hidden" name="replyTo" value="@">
-                    <input type="hidden" name="subject" value="New RSVP!"/>
-                    <input type="hidden" name="redirectTo" value="https://www.soontobesmits.co.uk/?sentRSVP"> 
-                    <input type="text" name="honeypot" style="display: none;">
+                    
                 </form>
             </div>
             <div class="col-md-5 col-sm-12">
@@ -1682,14 +1694,9 @@
         </div>
     </div>
 
-    <a href="#RSVP">
-        <div class="position-fixed bottom-0 end-0 rounded-circle m-3 text-center shadow"
-            style="background-color: #CCD5AE; height: 80px; line-height: 80px; width: 80px; font-size: 16pt; z-index: 999;">
-            <p class="text-center">RSVP</p>
-        </div>
-    </a>
+    
 
-    <div id="RSCPConfirmationAlert" class="fixed-top p-3" style="top:60px"></div>
+    
 
 
 </body>

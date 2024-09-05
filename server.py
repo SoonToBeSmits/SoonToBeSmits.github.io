@@ -12,6 +12,8 @@ import json
 app = Flask(__name__)
 URL = "/"
 
+RSVP = False
+
 CONTENT = {
     'NAV_OUR_STORY': {'en': "Our Story", 'nl': "Ons Verhaal"},
     'NAV_TIMELINE': {'en': "Timeline", 'nl': "Tijdlijn"},
@@ -999,6 +1001,14 @@ CONTENT = {
     'PROVIDE_NAMES': {'en': "Please provide their names below", 'nl': "Vul hier a.u.b. hun namen in"},
     'DIETARY_REQUIREMENTS': {'en': "Does anyone have any dietary requirements?", 'nl': "Heeft iemand dieetwensen of -beperkingen?"},
     'SUBMIT_RSVP': {'en': "Submit RSVP", 'nl': "Verstuur RSVP"},
+    'RSVP_CLOSED': {'en': "We're all set for the party; thank you for considering attending!", 'nl': "We zijn klaar voor het feest. Bedankt voor het overwegen om te komen!"},
+
+    # Extras
+    'ROAD_WORKS': {
+        'en': 'Please note that road closures may impact your travel plans -- Click here for more information!', 
+        'nl': 'Houd er rekening mee dat wegafsluitingen invloed kunnen hebben op je reisplannen -- Klik hier voor meer informatie!'
+    },
+
 }
 
 @app.template_filter('translate')
@@ -1028,7 +1038,7 @@ def save_index_page(response):
 @app.route('/', methods=['GET', 'POST'])
 def index_page():
     g.template = True
-    return render_template("index.html", content=CONTENT, url=URL)
+    return render_template("index.html", content=CONTENT, url=URL, RSVP=RSVP)
 
 @app.route('/<path:filename>')
 def send_media(filename):
